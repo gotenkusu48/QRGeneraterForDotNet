@@ -17,15 +17,34 @@ namespace QRCodeGeneraterForDotNet
 		public int Width { get; set; }
 		public int Height { get; set; }
 		
-		public QRCodeGeneraterForDotNet ()
-		{
-
-		}
-
 		public writeableBitmap GenerateQRCode (string source,short width,short height)
 		{
 			Width  = width;
 			Height = height;
+			string URL = makeURL(Width,Height);
+			
+		}
+		
+		proted writeableBitmap getImageFromURL(string url)
+		{
+			HttpClient client = new HttpClient();
+			var result = client.getAsync(url);
+			if (!result.IsSuccesCode)
+			{
+				throw new Exception("画像の取得に失敗しました");
+			}
+			
+			
+		}
+		
+		protected string makeURL(string source ,short width,short height)
+		{
+			string base = "http://chart.googleapis.com/chart?cht=qr&";
+			
+			base + "chl=" + source + "&";
+			base + "chs=" + width + "x" + height;
+			return base;
+			
 		}
 	}
 }
