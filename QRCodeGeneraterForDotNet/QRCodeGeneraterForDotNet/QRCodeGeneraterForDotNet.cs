@@ -13,14 +13,19 @@ namespace QRCodeGeneraterForDotNet
 {
 	public class QRCodeGeneraterForDotNet
 	{
+		
+		public int Width { get; set; }
+		public int Height { get; set; }
+		
 		public QRCodeGeneraterForDotNet ()
 		{
 
 		}
 
-		public writeableBitmap GenerateQRCode ()
+		public writeableBitmap GenerateQRCode (string source,short width,short height)
 		{
-
+			Width  = width;
+			Height = height;
 		}
 	}
 }
