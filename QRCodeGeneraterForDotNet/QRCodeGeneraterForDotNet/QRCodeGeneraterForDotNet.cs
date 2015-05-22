@@ -11,10 +11,16 @@ using System;
 
 namespace QRCodeGeneraterForDotNet
 {
-	public class MyClass
+	public class QRCodeGeneraterForDotNet
 	{
-		public MyClass ()
+		public QRCodeGeneraterForDotNet ()
 		{
+
+		}
+
+		public writeableBitmap GenerateQRCode ()
+		{
+
 		}
 	}
 }
