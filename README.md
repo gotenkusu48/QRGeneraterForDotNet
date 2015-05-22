@@ -1,2 +1,3 @@
 # QRGeneraterForDotNet
 QRコードを作成できる.Net向けのライブラリ
+licenseはapachelicenseとやらを採用していますのでお気軽にご使用なさってくださいませ。
