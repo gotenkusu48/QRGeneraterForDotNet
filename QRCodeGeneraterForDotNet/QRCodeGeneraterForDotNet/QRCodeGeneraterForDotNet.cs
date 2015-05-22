@@ -17,7 +17,7 @@ namespace QRCodeGeneraterForDotNet
 		public int Width { get; set; }
 		public int Height { get; set; }
 		
-		public writeableBitmap GenerateQRCode (string source,short width,short height)
+		public WriteableBitmap GenerateQRCode (string source,short width,short height)
 		{
 			Width  = width;
 			Height = height;
